@@ -1,0 +1,1 @@
+exports.WINDOWS_PLATFORM = 'win32';
