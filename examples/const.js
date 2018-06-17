@@ -4,5 +4,6 @@ exports.ZLIB_BEST_COMPRESSION = 9;
 exports.messageTypes = {
     SUCCESS: 'success',
     WARNING: 'warning',
-    ERROR: 'error'
+    ERROR: 'error',
+    INFO: 'cyan'
 }

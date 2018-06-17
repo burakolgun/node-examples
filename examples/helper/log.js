@@ -1,6 +1,6 @@
 require('colors');
 const { messageTypes } = require('../const');
-const { ERROR, WARNING, SUCCESS } = messageTypes;
+const { ERROR, WARNING, SUCCESS, INFO } = messageTypes;
 
 module.exports = function log (message, type) {
     let colorMessage;
@@ -16,7 +16,7 @@ module.exports = function log (message, type) {
         colorMessage = `[SUCCESS] ${message.green}`
         break;
         default:
-        colorMessage = `[INFO] ${message}`
+        colorMessage = `[INFO] ${message.cyan}`
     }
     console.log(colorMessage);
 }
