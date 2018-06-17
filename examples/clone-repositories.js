@@ -10,8 +10,12 @@ const repositoriesDirectory = path.join(__dirname, 'Docs', 'my-repositories');
 function cloneRepositories(repositoryPath, repositoryList = []) {
     if(!fs.existsSync(repositoriesDirectory)) {
         log('Directory NOT Found', WARNING);
-        log(`Directory created -> ${repositoriesDirectory}`);
-        fs.mkdirSync(repositoriesDirectory);
+        
+        //Synchronously creates a directory. Returns undefined. This is the synchronous version of fs.mkdir().
+        //https://nodejs.org/api/fs.html#fs_fs_mkdirsync_path_mode
+        if (fs.mkdirSync(repositoriesDirectory) === undefined) {
+            log(`Directory created -> ${repositoriesDirectory}`);
+        }
     } 
 
     const repositoryCount = repositoryList.length;
