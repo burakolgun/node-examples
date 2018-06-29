@@ -15,5 +15,4 @@ shell.cd(repoPath);
 shell.exec(`git checkout ${baseBranch}`);
 shell.exec(`git fetch origin ${baseBranch}`);
 shell.exec(`git reset --hard origin/${baseBranch}`);
-shell.exec(`git pull --rebase origin ${baseBranch}`);
 shell.exec(`git checkout -b ${branchName}`);
