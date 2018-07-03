@@ -1,6 +1,10 @@
 exports.WINDOWS_PLATFORM = 'win32';
-exports.JSOM_WHITE_SPACE = 4;
+exports.REMINDER_OPTIONS = {
+    JSON_WHITESPACE: 4,
+    NO_CHOICE_MADE: -1
+};
 exports.ZLIB_BEST_COMPRESSION = 9;
+
 exports.messageTypes = {
     SUCCESS: 'success',
     WARNING: 'warning',
