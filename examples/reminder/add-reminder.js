@@ -1,6 +1,6 @@
 const fs = require('fs');
-const { REMINDER_OPTIONS } = require('../const');
-const { JSON_WHITESPACE } = REMINDER_OPTIONS;
+const { SELECT_OPTIONS } = require('../const');
+const { JSON_WHITESPACE } = SELECT_OPTIONS;
 const { reminders } = require('../helper/.reminder.json');
 
 const args = process.argv.slice(2);

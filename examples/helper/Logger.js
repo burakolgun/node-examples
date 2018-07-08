@@ -1,11 +1,14 @@
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
-require('colors');
-const { messageTypes } = require('../const/');
+colors = require('colors');
+const { messageTypes } = require('../const');
 const { ERROR, WARNING, SUCCESS, INFO } = messageTypes;
 let csvWriter = null;
 
 module.exports = class Logger {
     constructor(path = null, header = null) {
+        let color = 'blue';
+        let message = '';
+
         if (path != null && header != null) {
             csvWriter = createCsvWriter({
                 path: path,
@@ -15,22 +18,24 @@ module.exports = class Logger {
     }
 
     consoleWrite(message, type) {
-        let colorMessage;
-
         switch (type) {
             case ERROR:
-                colorMessage = `[ERROR] ${message.red}`;
+                this.message = `[ERROR] ${message}`
+                this.color = 'red'
                 break;
             case WARNING:
-                colorMessage = `[WARNING] ${message.yellow}`;
+                this.message = `[WARNING] ${message}`
+                this.color = 'yellow'
                 break;
             case SUCCESS:
-                colorMessage = `[SUCCESS] ${message.green}`
+                this.message = `[SUCCESS] ${message}`
+                this.color = 'green'
                 break;
             default:
-                colorMessage = `[INFO] ${message.blue}`
+                this.message = `[INFO] ${message}`
+                this.color = 'blue'
         }
-        console.log(colorMessage.cyan);
+        console.log(colors[this.color](this.message));
     }
 
     csvWrite(record) {
@@ -40,4 +45,3 @@ module.exports = class Logger {
             });
     }
 }
-

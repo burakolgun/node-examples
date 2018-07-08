@@ -1,8 +1,8 @@
 require('colors');
 const fs = require('fs');
 const readLineSync = require('readline-sync');
-const { REMINDER_OPTIONS } = require('../const');
-const { JSON_WHITESPACE, NO_CHOICE_MADE } = REMINDER_OPTIONS;
+const { SELECT_OPTIONS } = require('../const');
+const { JSON_WHITESPACE, NO_CHOICE_MADE } = SELECT_OPTIONS;
 const { reminders } = require('../helper/.reminder.json');
 
 if (reminders.readLineSync === 0) {

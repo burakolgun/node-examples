@@ -1,5 +1,5 @@
 exports.WINDOWS_PLATFORM = 'win32';
-exports.REMINDER_OPTIONS = {
+exports.SELECT_OPTIONS = {
     JSON_WHITESPACE: 4,
     NO_CHOICE_MADE: -1
 };
@@ -11,3 +11,5 @@ exports.messageTypes = {
     ERROR: 'error',
     INFO: 'cyan'
 }
+
+exports.GAME_TEMPLATES = 'game-templates';
