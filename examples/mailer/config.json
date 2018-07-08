@@ -1,0 +1,9 @@
+{
+    "FROM_EMAIL": "Node bot Test <sender@example.com",
+    "TO_EMAIl": "Dev Team <receiver@example.com>",
+    "HOST": "mysmtp.domain.io",
+    "AUTH": {
+        "USERNAME": "ENTER_USERNAME",
+        "PASSWORD": "ENTER_PASSWORD"
+    }
+}
