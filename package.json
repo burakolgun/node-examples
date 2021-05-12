@@ -13,7 +13,7 @@
     "csv-parse": "^4.4.6",
     "csv-writer": "^1.0.0",
     "fs-extra": "^6.0.1",
-    "nodemailer": "^4.6.7",
+    "nodemailer": "^6.4.16",
     "readline-sync": "^1.4.9",
     "shelljs": "^0.8.2",
     "stream-transform": "^1.0.2",
